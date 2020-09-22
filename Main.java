@@ -11,11 +11,7 @@ public class EmployeeWageBuilder1{
 
     if(empCheck == IS_FULL_TIME)
       empHour = 8;
-    else if(empCheck == IS_PART_TIME)
-      empHour = 4;
-    else
-     empHour = 0;
-
+    
     empWage = empHour*RATE_PER_HOUR;
 
     System.out.println("empWage : "+empWage);

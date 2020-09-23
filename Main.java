@@ -1,4 +1,4 @@
-public class EmployeeWageBuilderFor{
+public class Main{
 
 
   public static final int IS_PART_TIME = 1;

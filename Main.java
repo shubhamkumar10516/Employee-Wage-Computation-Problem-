@@ -7,10 +7,8 @@ public class Main{
   public static final int NUM_OF_WORKING_DAYS = 2;
   public static final int MAX_HRS_IN_MONTH = 10;
   
-  public static void main(String args[]){
-
-
-    int empHour =0, totalEmpHrs = 0, totalWorkingDays = 0;
+  public static void computeWage(){
+   int empHour =0, totalEmpHrs = 0, totalWorkingDays = 0;
     int empWage = 0, totalEmpWage = 0;
    
     while(empHour <= MAX_HRS_IN_MONTH && totalWorkingDays <= NUM_OF_WORKING_DAYS){
@@ -32,9 +30,15 @@ public class Main{
     totalEmpHrs += empHour; 
     System.out.println(" day no : "+totalWorkingDays +" Emp Hr: "+empHour);
   }
-    totalEmpWage = Rate_PER_HOUR * totalEmpHrs;
+    totalEmpWage = RATE_PER_HOUR * totalEmpHrs;
      System.out.println(" total employee Wage : "+totalEmpWage);
      
   }
+
+  
+  public static void main(String args[]){
+
+    computeWage();
+ }   
 
 }

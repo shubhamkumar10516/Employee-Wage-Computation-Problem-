@@ -1,26 +1,28 @@
+import java.util.*;
+
 public class Main{
 
 
   public static final int IS_PART_TIME = 1;
   public static final int IS_FULL_TIME = 2;
   
-  private int noOfCompany = 0;
-  private CompanyEmpWage[] empArray;
+  
+  private ArrayList<CompanyEmpWage> empArray; 
   
   public Main(){
-   empArray = new CompanyEmpWage[5];
+   empArray = new ArrayList<CompanyEmpWage>();;
   }
   public void addEmployeeToArr(String com, int ratePerHr, int noOfDays, int maxHrPerMonth){
    
-     empArray[noOfCompany++] = new CompanyEmpWage(com, ratePerHr, noOfDays, maxHrPerMonth);
+     empArray.add(new CompanyEmpWage(com, ratePerHr, noOfDays, maxHrPerMonth));
 
   }
 
   public void computeWage(){
 
-   for(int i = 0 ; i < noOfCompany ; i++){
+   for(int i = 0 ; i < empArray.size() ; i++){
 
-        empArray[i].setTotalEmpWage(this.calcEmpWage(empArray[i]));
+        empArray.get(i).setTotalEmpWage(this.calcEmpWage(empArray.get(i)));
      }
    }
   
